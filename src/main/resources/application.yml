@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/webdb
+    username: webuser
+    password: webuser
+
+# JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+# 간단한 log level 설정
+logging:
+  file:
+    path: C:\Users\lik70\OneDrive\바탕 화면\이민복\학습\todolist (2)
+  level:
+    root: info
+    org.zerock: debug

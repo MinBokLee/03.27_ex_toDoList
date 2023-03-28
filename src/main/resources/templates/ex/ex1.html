@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymelef.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <H4>[[${list}]]</H4>
+<Hr/>
+    <H4 th:text="${list}"></H4>
+<Hr/>
+ <div th:with= "num1= ${10}, num2= ${20}">
+     <h4 th:text="${num1 + num2}"></h4>
+ </div>
+<Hr/>
+    <ul> <li th:each="str: ${list}" th:text="${str}"> </li></ul>
+
+    <ul>
+        <th:block th:each="str: ${list}">
+            <li> [[${str}]]</li>
+        </th:block>
+    </ul>
+<Hr/>
+    <ul>
+        <li th:each="str, status: ${list}" >
+            [[${status.index}]] --[[${str}]]
+        </li>
+    </ul>
+
+</body>
+</html>
